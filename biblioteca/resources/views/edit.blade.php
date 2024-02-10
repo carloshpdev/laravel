@@ -24,7 +24,10 @@
                 <label for="author_id_update_book">Autor:</label>
                 <select id="author_id_update_book" name="author_id_update_book">
                     @foreach($authors as $author)
-                        <option value="{{ $author->id }}" @if($author->id === $book->author_id) selected @endif>{{ $author->name }} {{ $author->surname }}</option>
+                        <option value="{{ $author->id }}"
+                            @if($author->id === $book->author_id)selected
+                            @endif>{{ $author->name }} {{ $author->surname }}
+                        </option>
                     @endforeach
                 </select>
             </div>
