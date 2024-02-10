@@ -28,7 +28,7 @@
                         <td>{{ $book->category }}</td>
                         <td>{{ $book->authors->name }} {{ $book->authors->surname }}</td>
                         <td>
-                            <a href="/books/edit">Edit</a>
+                             <a href="{{ route('books.edit', $book->id) }}">Edit</a>
                         </td>
                         <td>
                             <form action="/books/{{ $book->id }}" method="POST">
