@@ -16,6 +16,9 @@
                     <th>Title</th>
                     <th>Category</th>
                     <th>Author</th>
+                    <th>
+                        <a href="{{'books/create'}}">New Book</a>
+                    </th>
                 </tr>
             </thead>
             <tbody>
