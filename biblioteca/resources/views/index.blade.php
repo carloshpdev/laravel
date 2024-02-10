@@ -13,7 +13,7 @@
             <li><a href="{{'/authors'}}">Author Zone</a></li>
             <li><a href="{{'/books'}}">Book Zone</a></li>
             <li><a href="{{'/users'}}">Users Zone</a></li>
-            <li><a href="{{'/rents'}}">Rent Zone</a></li>
+            <li><a href="{{'/rentals'}}">Rent Zone</a></li>
         </ul>
     </section>
 </body>

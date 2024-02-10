@@ -15,4 +15,9 @@ class Book extends Model
     {
         return $this->belongsTo(Author::class, 'id_author');
     }
+
+    public function rentals()
+    {
+        return $this->hasMany(Rental::class);
+    }
 }

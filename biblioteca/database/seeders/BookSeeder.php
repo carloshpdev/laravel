@@ -14,13 +14,13 @@ class BookSeeder extends Seeder
     public function run(): void
     {
         Book::create([
-            'id_author' => 1,
+            'id_author' => 5,
             'title' => 'Mary and the three lambs',
             'category' => 'Mistery',
         ]);
 
         Book::create([
-            'id_author' => 1,
+            'id_author' => 5,
             'title' => 'The Journey of Dreams',
             'category' => 'Fantasy',
         ]);
@@ -68,7 +68,7 @@ class BookSeeder extends Seeder
         ]);
 
         Book::create([
-            'id_author' => 1,
+            'id_author' => 5,
             'title' => 'The Journey of Dreams',
             'category' => 'Fantasy',
         ]);
@@ -116,7 +116,7 @@ class BookSeeder extends Seeder
         ]);
 
         Book::create([
-            'id_author' => 1,
+            'id_author' => 5,
             'title' => 'The Enchanted Forest',
             'category' => 'Fantasy',
         ]);
@@ -164,7 +164,7 @@ class BookSeeder extends Seeder
         ]);
 
         Book::create([
-            'id_author' => 1,
+            'id_author' => 5,
             'title' => 'The Crystal Caverns',
             'category' => 'Fantasy',
         ]);

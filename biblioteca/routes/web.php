@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Book;
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\RentalController;
 
 
 /*
@@ -37,3 +38,12 @@ Route::delete('/authors/{author}', [AuthorController::class, 'destroy'])->name('
 Route::post('/authors', [AuthorController::class, 'store'])->name('authors.store');
 Route::get('/authors/create', [AuthorController::class, 'create'])->name('authors.create');
 Route::put('/authors/{author}', [AuthorController::class, 'update'])->name('authors.update');
+
+
+//Rental Routes
+Route::get('/rentals', [RentalController::class, 'index'])->name('rentals.index');
+Route::get('/rentals/create', [RentalController::class, 'create'])->name('rentals.create');
+Route::post('/rentals/store', [RentalController::class, 'store'])->name('rentals.store');
+Route::get('/rentals/{rental}/edit', [RentalController::class, 'edit'])->name('rentals.edit');
+Route::put('/rentals/{rental}', [RentalController::class, 'update'])->name('rentals.update');
+Route::delete('/rentals/{rental}', [RentalController::class, 'destroy'])->name('rentals.destroy');
