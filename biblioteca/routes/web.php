@@ -5,6 +5,9 @@ use App\Models\Book;
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\RentalController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
+use Illuminate\Support\Facades\Auth;
 
 
 /*
@@ -47,3 +50,15 @@ Route::post('/rentals/store', [RentalController::class, 'store'])->name('rentals
 Route::get('/rentals/{rental}/edit', [RentalController::class, 'edit'])->name('rentals.edit');
 Route::put('/rentals/{rental}', [RentalController::class, 'update'])->name('rentals.update');
 Route::delete('/rentals/{rental}', [RentalController::class, 'destroy'])->name('rentals.destroy');
+
+
+//Login route
+Route::get('login', [LoginController::class, 'showLoginFormView'])->name('login');
+Route::post('login', [LoginController::class, 'authenticate'])->name('login.submit');
+Route::post('/register', [RegisterController::class, 'register'])->name('register');
+
+
+Route::get('/logout', function () {
+    Auth::logout();
+    return redirect()->route('login');
+});
